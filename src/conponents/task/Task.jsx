@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Task = ({ task }) => {
+const Task = ({ task, taskList, setTaskList }) => {
   const handleDelete = (id) => {
-
+    setTaskList(taskList.filter((task) => task.id !== id));
   }
   return (
     <div className='taskBox'>
