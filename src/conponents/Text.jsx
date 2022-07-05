@@ -9,7 +9,7 @@ const Text = () => {
       <button onClick={() => setCount(coun + 1)} className="textButton" >
         +
       </button>
-      <button onClick={() => setCount(coun - 1)} className="textButton" >
+      <button onClick={coun == 0 ? () =>setCount(0) : () => setCount(coun - 1)} className="textButton" >
         -
       </button>
       <button onClick={() => setCount(0)} className="textButton" >
