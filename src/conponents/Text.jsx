@@ -21,12 +21,11 @@ const Text = () => {
   const countDown = () => {
     setCount(count == 0 ? 0 : prevState => prevState - 1)
   }
-
   return (
     <div className="textBox" >
       {show ? (
-        <div id="overlay">
-          <div id="content">
+        <div id="overlay" onClick={closeModal} >
+          <div id="content" onClick={(e) => e.stopPropagation()}>
             <p>これがモーダルウィンドウです。</p>
             <p><button onClick={closeModal}>close</button></p>
           </div>
